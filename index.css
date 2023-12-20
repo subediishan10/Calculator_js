@@ -1,8 +1,30 @@
-#calculator{
+.container{
    border-radius: 10px;
     width :200px;
+    background-color: rgb(162, 172, 172);
+
 }
-btn-secondary{
-   
+
+#text{
+    border-radius: 8px;
+    width: 96%;
+    display:flex;
+    justify-content:center;
+    height: 30px;
+}
+.btn_container{
+    display:flex;
+    justify-content:center;
     border-radius: 10px;
+    flex-wrap: wrap;
+   
+    
+}
+.button{
+    width:40px;
+    height: 40px;
+    margin:3px;
+    text-size-adjust: 9px;
+
+    
 }

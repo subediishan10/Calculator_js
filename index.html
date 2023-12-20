@@ -8,41 +8,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <title>Calculator</title>
   </head>
   <body>
-    <div class="container my-5 d-flex justify-content-center">
-        <div id="calculator" class="bg-secondary">
-            <h4 class="container d-flex justify-content-center">Calculator</h4>
-            <input class =" container d-flex justify-content-center"type="text">
-            <div>
-                <button  class="btn-secondary">C</button>
-                <button  class="btn-secondary">B</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">/</button>
-                <button  class="btn-secondary">7</button>
-                <button  class="btn-secondary">8</button>
-                <button  class="btn-secondary">9</button>
-                <button  class="btn-secondary">*</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">*</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">-</button>
-                <button  class="btn-secondary">+</button>
-                <button  class="btn-secondary">1</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">%</button>
-                <button  class="btn-secondary">%</button>
-            </div>
-           
-        </div>
-    </div>
-    
+        <div class="container">     
+         <h1><input id ="text" type="text" readonly ></h1>
+            <div class="btn_container">
+                <button  class="button" onclick="
+                currentDisplay='';
+                document.querySelector('#text').value=currentDisplay">C</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay -'';
+                document.querySelector('#text').value=currentDisplay">B</button>
+
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'%';
+                document.querySelector('#text').value=currentDisplay">%</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'/';
+                document.querySelector('#text').value=currentDisplay">/</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'7';
+                document.querySelector('#text').value=currentDisplay">7</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'8';
+                document.querySelector('#text').value=currentDisplay">8</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'9';
+                document.querySelector('#text').value=currentDisplay">9</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'*';
+                document.querySelector('#text').value=currentDisplay">*</button>
+                
+                <button  class="button" onclick="
+                currentDisplay=currentDisplay +'4';
+                document.querySelector('#text').value=currentDisplay">4</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'5';
+                document.querySelector('#text').value=currentDisplay">5</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'6';
+                document.querySelector('#text').value=currentDisplay">6</button>
+                
+                <button  class="button" onclick="
+                let result = eval(currentDisplay);
+                currentDisplay=result;
+                currentDisplay=currentDisplay +'+';
+                document.querySelector('#text').value=currentDisplay">+</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'1';
+                document.querySelector('#text').value=currentDisplay">1</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'2';
+                document.querySelector('#text').value=currentDisplay">2</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'3';
+                document.querySelector('#text').value=currentDisplay">3</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'-';
+                document.querySelector('#text').value=currentDisplay">-</button>
+                
+                <button  class="button"  onclick="
+                currentDisplay=currentDisplay +'0';
+                document.querySelector('#text').value=currentDisplay">0</button>
+               
+               <button  class="button"  onclick="
+                  currentDisplay=currentDisplay +'.';
+                  document.querySelector('#text').value=currentDisplay">.</button>
+                
+                <button  class="button" onclick="
+                let results = eval(currentDisplay);
+                currentDisplay=results;
+                document.querySelector('#text').value=currentDisplay">=</button>  
+            </div>  
+        </div>
+           <script>
+            let currentDisplay ='';
+            document.querySelector('#text').value=currentDisplay;
+           </script>
   </body>
 </html>
