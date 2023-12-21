@@ -10,8 +10,89 @@
 
     <title>Calculator</title>
   </head>
-  <body>
-        <div class="container">     
+  <body class="body">
+    <!-- Cricket game introduced-->
+
+    <div class="cricket">
+      <h2>Bat Ball Stump Game</h2>
+      <button onclick="
+      const userChoiceMsg='You have chosen Bat';
+      let computerChoice;
+      let randomNumber=Math.random()*3;
+      if(randomNumber>0 && randomNumber <=1){
+        computerChoice ='Bat';
+      }else if(randomNumber>1 && randomNumber <=2){
+        computerChoice ='Ball';
+      }else{
+        computerChoice ='Stump';
+      }
+      const computerChoiceMsg=`Compute choice is ${computerChoice}`;
+      let resultMsg;
+      if (computerChoice === 'Ball'){
+        resultMsg='User won.';
+      }else if(computerChoice === 'Bat'){
+        resultMsg=`It's a tie`;
+      }else if(computerChoice === 'Stump'){
+        resultMsg='Computer has won';
+      }
+
+      alert(`${userChoiceMsg} and computer choose ${computerChoice} and ${resultMsg}`);
+      
+      ">BAT</button>
+
+      <button onclick="
+      let usersChoiceMsg='You have chosen Ball';
+      let computerChoic;
+      randomNumber=Math.random()*3;
+      if(randomNumber>0 && randomNumber <=1){
+        computerChoic ='Bat';
+      }else if(randomNumber>1 && randomNumber <=2){
+        computerChoic ='Ball';
+      }else{
+        computerChoic ='Stump';
+      }
+      computerChoiceMsg=`Computer choice is ${computerChoic}`;
+      let resultsMsg;
+      if (computerChoic === 'Ball'){
+        resultsMsg=`It's a tie`;
+      }else if(computerChoic === 'Bat'){
+        resultsMsg='Computer has won';
+      }else if(computerChoic === 'Stump'){
+        resultsMsg='User won';
+      }
+
+      alert(`${usersChoiceMsg} and computer choose ${computerChoic} and ${resultsMsg}`);
+      ">BALL</button>
+
+
+      <button   onclick="
+      let userMsg='You have chosen Ball';
+      let computer_Choice;
+      let random_Numbers=Math.random()*3;
+      if(random_Numbers>0 && random_Numbers <=1){
+        computer_Choice ='Bat';
+      }else if(random_Numbers>1 && random_Numbers <=2){
+        computer_Choice ='Ball';
+      }else{
+        computer_Choice ='Stump';
+      }
+      computerChoiceMsg=`Computer choice is ${computer_Choice}`;
+      let result_Msg;
+      if (computer_Choice === 'Ball'){
+        result_Msg='Computer has won';
+      }else if(computer_Choice === 'Bat'){
+        result_Msg='User won';
+      }else if(computer_Choice === 'Stump'){
+        result_Msg=`It's a tie`;
+      }
+
+      alert(`${userMsg} and computer choose ${computer_Choice} and ${result_Msg}`);
+      ">STUMP</button>
+    </div>
+    <hr>
+    <!-- Calculator code-->
+        <div class="container">  
+          <h3 class="head">Calculator</h3>   
          <h1><input id ="text" type="text" readonly ></h1>
             <div class="btn_container">
                 <button  class="button" onclick="

@@ -1,8 +1,15 @@
 .container{
    border-radius: 10px;
     width :200px;
-    background-color: rgb(162, 172, 172);
+    background-color: rgb(12, 185, 185);
 
+}
+.cricket{
+    text-align: center;
+}
+.head{
+    display:flex;
+    justify-content:center;
 }
 
 #text{
@@ -11,20 +18,28 @@
     display:flex;
     justify-content:center;
     height: 30px;
+    background-color: rgb(98, 219, 124);
 }
 .btn_container{
     display:flex;
     justify-content:center;
     border-radius: 10px;
-    flex-wrap: wrap;
-   
+    flex-wrap: wrap; 
     
 }
 .button{
     width:40px;
     height: 40px;
     margin:3px;
-    text-size-adjust: 9px;
-
-    
+    text-size-adjust: 9px;  
+    border:none;
+    border-radius:9px ;
+}
+   
+.button:hover {
+    background-color: rgb(98, 219, 124);
+    font-size: 18px;
+    cursor: pointer;
+    transform: scale(1.15);
+    border-radius:9px ;
 }
