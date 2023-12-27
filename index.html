@@ -16,51 +16,24 @@
     <div class="cricket">
       <h2>Bat Ball Stump Game</h2>
       <button onclick="
-      let computerChoice=generateComputergame();
-      let resultMsg;
-      let userChoiceMsg='Bat';
-      if (computerChoice === 'Ball'){
-        resultMsg='User won.';
-      }else if(computerChoice === 'Bat'){
-        resultMsg=`It's a tie`;
-      }else if(computerChoice === 'Stump'){
-        resultMsg='Computer has won';
-      }
-
-      alert(`${userChoiceMsg} and computer choose ${computerChoice} and ${resultMsg}`);
-      
+      let computerMove=generateComputergame();
+      let resultMsg=getResult('Bat', computerMove);
+      showResult('Bat',computerMove,resultMsg);
       ">BAT</button>
 
       <button onclick="
-      computerChoice=generateComputergame();
-      let resultsMsg;
-      let userschoiceMsg='Ball';
-      if (computerChoice === 'Ball'){
-        resultsMsg=`It's a tie`;
-      }else if(computerChoice === 'Bat'){
-        resultsMsg='Computer has won';
-      }else if(computerChoice === 'Stump'){
-        resultsMsg='User won';
-      }
-
-      alert(`${usersChoiceMsg} and computer choose ${computerChoice} and ${resultsMsg}`);
+      let computer_Move=generateComputergame();
+      let result_Msg=getResult('Ball', computer_Move);
+      showResult('Ball',computer_Move,result_Msg);
       ">BALL</button>
 
 
-      <button   onclick="
-      computerChoice=generateComputergame();
-      let result_Msg;
-      let userMsg='Stump';
-      if (computerChoice === 'Ball'){
-        result_Msg='Computer has won';
-      }else if(computerChoice === 'Bat'){
-        result_Msg='User won';
-      }else if(computerChoice === 'Stump'){
-        result_Msg=`It's a tie`;
-      }
-
-      alert(`${userMsg} and computer choose ${computerChoice} and ${result_Msg}`);
+      <button onclick="
+      computerMoves=generateComputergame();
+      resultsMsg=getResult('Stump', computerMoves);
+      showResult('Stump',computerMoves,resultsMsg);
       ">STUMP</button>
+
     </div>
     <hr>
     <!-- Calculator code-->
@@ -161,10 +134,45 @@
                if(randomNumber>0 && randomNumber <=1){
                  return'Bat';
                }else if(randomNumber>1 && randomNumber <=2){
-                return'Ball';
+                 return'Ball';
                }else{
-                return'Stump';
+                 return'Stump';
                }
+            }
+
+            function getResult(userMove,computerMove){
+             if(userMove==='Bat'){
+               if(computerMove==='Ball'){
+                  return 'User won'
+                }else if(computerMove === 'Bat'){
+                  return`It's a tie`;
+                }else if(computerMove === 'Stump'){
+                  return'Computer won';
+                }
+             
+              }else if(userMove ==='Ball'){
+                if (computerMove === 'Ball'){
+                  return `It's a tie`;
+                }else if(computerMove === 'Bat'){
+                  return 'Computer won';
+                }else if(computerMove === 'Stump'){
+                  return 'User won';
+              }
+             }else{
+                if (computerMove ==='Ball'){
+                  return 'Computer won';
+                }else if(computerMove === 'Bat'){
+                  return 'User won';
+                }else if(computerMove === 'Stump'){
+                  return `It's a tie`;
+                }
+              }
+            }
+          
+
+            function showResult(userMove, computerMove,result){
+              alert(`You have chosen ${userMove} and computer choose ${computerMove}. ${result}`);
+
             }
            </script>
   </body>
